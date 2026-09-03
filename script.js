@@ -1,51 +1,31 @@
-let name = "Iman Sagheer";
-const site = "GrowthLift";
-var oldway = "Avoid It";
 
-let greeting = "Hello";
-let price = 15000;
-let isOnline = true;
-let skills = ["HTML", "CSS", "JS"];
-let intern = {
-    name: "Iman",
-    week: 2,
-    Location: "Lahore"
-};
+const tabs = document.querySelectorAll(".tab-btn");
+const contents = document.querySelectorAll(".tab-content");
 
-function greet(name){
-    return "Hello " + name;
-}
+tabs.forEach(tab => {
 
-console.log(greet("Iman"));
+    tab.addEventListener("click", () => {
 
-const welcome = (name) => {
-    return "Welcome " + name;
-};
+ 
+        tabs.forEach(tab => {
+            tab.classList.remove("active");
+        });
 
-console.log(welcome("Iman"));
+      
+        tab.classList.add("active");
 
 
+      
+        contents.forEach(content => {
+            content.classList.remove("active");
+        });
 
-for (let i = 0; i < 5; i++){
-    console.log(i);
-}
 
+       
+        const selectedContent = document.getElementById(tab.dataset.tab);
 
+        selectedContent.classList.add("active");
 
-skills.forEach(skill => {
-    console.log(skill);
+    });
+
 });
-
-
-
-if (isOnline){
-    console.log("User is Online");
-}
-else {
-    console.log("User is Offline");
-}
-
-
-console.log(`Welcome to ${site}, ${name}!`);
-
-
