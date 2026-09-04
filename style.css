@@ -296,3 +296,40 @@ footer {
 .tab-content.active {
     display: block;
 }
+
+.quote-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#quote-box {
+    background-color: white;
+    padding: 30px;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(52, 78, 65, 0.12);
+}
+
+#quote-text {
+    font-size: 20px;
+    font-style: italic;
+    color: #344E41;
+    line-height: 1.6;
+}
+
+#new-quote {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #BC6C25;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+#new-quote:hover {
+    background-color: #A55B1B;
+    transform: translateY(-2px);
+}

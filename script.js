@@ -29,3 +29,25 @@ tabs.forEach(tab => {
     });
 
 });
+
+const quoteText = document.getElementById("quote-text");
+const newQuoteButton = document.getElementById("new-quote");
+
+function getQuote() {
+
+    quoteText.textContent = "Loading...";
+
+    fetch("https://dummyjson.com/quotes/random")
+        .then(response => response.json())
+        .then(data => {
+            quoteText.textContent = `"${data.quote}" — ${data.author}`;
+        })
+        .catch(error => {
+            quoteText.textContent = "Could not load quote.";
+            console.error(error);
+        });
+}
+
+getQuote();
+
+newQuoteButton.addEventListener("click", getQuote);
